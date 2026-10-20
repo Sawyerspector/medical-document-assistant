@@ -8,9 +8,13 @@ Today, users upload records they've exported or downloaded. Importing directly f
 
 Built solo and refined with feedback from healthcare professionals. Currently awaiting server integration to run AI locally inside a clinic.
 
-> **Note:** This is a showcase repository. The source code is private while the project is in active development — available on request.
+> **Note:** This is a showcase repository. The source code is private while the project is in active development and is available on request. All patient data shown is synthetic.
 
-<!-- Add a screenshot of a cited answer here: drag an image into the GitHub editor -->
+<p align="center">
+  <img width="100%" alt="Visit-prep brief summarizing a patient's recent changes, with citations and source documents" src="https://github.com/user-attachments/assets/ea9ea84a-aa6e-44ef-bf01-27e176d30005" />
+  <br />
+  <sub><b>Visit-prep brief:</b> what's new across a patient's records, with every point cited to its source</sub>
+</p>
 
 ---
 
@@ -22,7 +26,29 @@ Built solo and refined with feedback from healthcare professionals. Currently aw
 2. **Parse:** text extraction with an explicit status for every file (parsed, empty, needs OCR, failed), so problem files never disappear silently
 3. **Chunk & embed:** page-aware chunking and CPU embedding into a local ChromaDB index
 4. **Retrieve:** a calibrated distance cutoff drops unrelated chunks before they reach the LLM
-5. **Answer:** a local model (Currently Llama 3.1 8B) generates the answer, and citation markers are validated against the retrieved sources. If the answer isn't in the documents, it says so instead of guessing.
+5. **Answer:** a local model (currently Llama 3.1 8B) generates the answer, and citation markers are validated against the retrieved sources. If the answer isn't in the documents, it says so instead of guessing.
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img width="100%" alt="Ask page answering a question about a patient's records with citations" src="https://github.com/user-attachments/assets/9af8d1fb-9d20-43e6-8c7d-7bb80858351f" />
+  <br />
+  <sub><b>Ask:</b> plain-language questions answered only from the uploaded documents</sub>
+</p>
+
+<p align="center">
+  <img width="100%" alt="Clinician schedule showing today's visits and chart-readiness warnings" src="https://github.com/user-attachments/assets/8eb8bf40-be26-4429-95dd-f54f517cfb3a" />
+  <br />
+  <sub><b>Clinician schedule:</b> today's visits with chart-readiness warnings and one-click visit prep</sub>
+</p>
+
+<p align="center">
+  <img width="100%" alt="Patient chart overview with records by section and visit history" src="https://github.com/user-attachments/assets/7a301234-11da-4cb8-b74f-61684b25dadf" />
+  <br />
+  <sub><b>Patient chart:</b> records organized by type, with visit history and the next appointment</sub>
+</p>
 
 ---
 
@@ -56,8 +82,8 @@ Built solo and refined with feedback from healthcare professionals. Currently aw
 
 ## Tech Stack
 
-**Backend:** Python, FastAPI, ChromaDB, Ollama (Llama 3.1 8B)
-**Frontend:** React, Vite, TypeScript
+**Backend:** Python, FastAPI, ChromaDB, Ollama (Llama 3.1 8B)<br />
+**Frontend:** React, Vite, TypeScript<br />
 **Testing:** pytest
 
 ---
