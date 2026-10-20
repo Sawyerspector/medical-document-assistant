@@ -10,10 +10,36 @@ Built solo and refined with feedback from healthcare professionals. Currently aw
 
 > **Note:** This is a showcase repository. The source code is private while the project is in active development and is available on request. All patient data shown is synthetic.
 
+---
+
+## Walkthrough: A Clinician's Day
+
+### 1. Start with the schedule
+The day opens on the clinician's schedule. Each visit shows how many records are on file, and charts that may be out of date are flagged before the patient arrives, like the warning that Elena Petrova's newest record is over 180 days old.
+
 <p align="center">
-  <img width="100%" alt="Visit-prep brief summarizing a patient's recent changes, with citations and source documents" src="https://github.com/user-attachments/assets/ea9ea84a-aa6e-44ef-bf01-27e176d30005" />
-  <br />
-  <sub><b>Visit-prep brief:</b> what's new across a patient's records, with every point cited to its source</sub>
+  <img width="100%" alt="Clinician schedule showing today's visits, document counts, and a chart-readiness warning" src="https://github.com/user-attachments/assets/ea9ea84a-aa6e-44ef-bf01-27e176d30005" />
+</p>
+
+### 2. Open the patient's chart
+Clicking **Prepare** opens the chart. Uploaded records are sorted into summaries, labs, imaging, and medications, alongside the patient's visit history and next appointment.
+
+<p align="center">
+  <img width="100%" alt="Patient chart overview with records organized by type and visit history" src="https://github.com/user-attachments/assets/9af8d1fb-9d20-43e6-8c7d-7bb80858351f" />
+</p>
+
+### 3. Review what's changed
+The visit-prep brief summarizes everything new since the last visit: new lab results, a medication added, and overdue follow-ups. Every point is cited, and the source documents are listed underneath.
+
+<p align="center">
+  <img width="100%" alt="Visit-prep brief listing new labs, medication changes, and follow-ups, each with a citation" src="https://github.com/user-attachments/assets/8eb8bf40-be26-4429-95dd-f54f517cfb3a" />
+</p>
+
+### 4. Ask a specific question
+For anything more specific, the clinician asks in plain language. Here, the assistant tracks a patient's creatinine across two lab reports, cites the exact document and page for each value, and suggests relevant follow-up questions.
+
+<p align="center">
+  <img width="100%" alt="Ask page answering a question about creatinine trends with cited lab reports" src="https://github.com/user-attachments/assets/7a301234-11da-4cb8-b74f-61684b25dadf" />
 </p>
 
 ---
@@ -27,28 +53,6 @@ Built solo and refined with feedback from healthcare professionals. Currently aw
 3. **Chunk & embed:** page-aware chunking and CPU embedding into a local ChromaDB index
 4. **Retrieve:** a calibrated distance cutoff drops unrelated chunks before they reach the LLM
 5. **Answer:** a local model (currently Llama 3.1 8B) generates the answer, and citation markers are validated against the retrieved sources. If the answer isn't in the documents, it says so instead of guessing.
-
----
-
-## Screenshots
-
-<p align="center">
-  <img width="100%" alt="Ask page answering a question about a patient's records with citations" src="https://github.com/user-attachments/assets/9af8d1fb-9d20-43e6-8c7d-7bb80858351f" />
-  <br />
-  <sub><b>Ask:</b> plain-language questions answered only from the uploaded documents</sub>
-</p>
-
-<p align="center">
-  <img width="100%" alt="Clinician schedule showing today's visits and chart-readiness warnings" src="https://github.com/user-attachments/assets/8eb8bf40-be26-4429-95dd-f54f517cfb3a" />
-  <br />
-  <sub><b>Clinician schedule:</b> today's visits with chart-readiness warnings and one-click visit prep</sub>
-</p>
-
-<p align="center">
-  <img width="100%" alt="Patient chart overview with records by section and visit history" src="https://github.com/user-attachments/assets/7a301234-11da-4cb8-b74f-61684b25dadf" />
-  <br />
-  <sub><b>Patient chart:</b> records organized by type, with visit history and the next appointment</sub>
-</p>
 
 ---
 
