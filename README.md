@@ -22,7 +22,7 @@ Built solo and refined with feedback from healthcare professionals. Currently aw
 2. **Parse:** text extraction with an explicit status for every file (parsed, empty, needs OCR, failed), so problem files never disappear silently
 3. **Chunk & embed:** page-aware chunking and CPU embedding into a local ChromaDB index
 4. **Retrieve:** a calibrated distance cutoff drops unrelated chunks before they reach the LLM
-5. **Answer:** a local Llama 3.1 8B model (via Ollama) generates the answer, and citation markers are validated against the retrieved sources. If the answer isn't in the documents, it says so instead of guessing.
+5. **Answer:** a local model (Currently Llama 3.1 8B) generates the answer, and citation markers are validated against the retrieved sources. If the answer isn't in the documents, it says so instead of guessing.
 
 ---
 
