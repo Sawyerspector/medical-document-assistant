@@ -4,7 +4,7 @@ Local-first RAG assistant for medical documents
 
 Medical records are scattered across patient portals, hospital systems, lab and imaging portals, and pharmacies, which makes them messy and hard to find. Medical Document Assistant brings them together in one place and lets **clinicians and patients ask questions about them in plain language**, with every answer **cited back to the source document and page**.
 
-Today, users upload records they've exported or downloaded. Importing directly from portals and health systems is on the roadmap. Everything runs on the user's own machine by default, and no patient data is sent anywhere unless a remote model is explicitly configured.
+Today, users upload records they've exported or downloaded. The goal is to pull records directly from where they already live, such as EHR systems like Epic and existing patient portals, so no one has to collect them by hand. Everything runs on the user's own machine by default, and no patient data is sent anywhere unless a remote model is explicitly configured.
 
 Built solo and refined with feedback from healthcare professionals. Currently awaiting server integration to run AI locally inside a clinic.
 
@@ -96,7 +96,8 @@ For anything more specific, the clinician asks in plain language. Here, the assi
 
 - Local OCR for scanned documents
 - Structured import of patient portal exports (C-CDA/CCD)
-- FHIR / SMART on FHIR retrieval, behind real authentication and a security review
+- Direct, patient-authorized retrieval from EHR systems such as Epic and from existing patient portals via FHIR / SMART on FHIR, behind real authentication and a security review
+- Schedule sync with EHR and practice-management systems
 - Real authentication, verified roles, and audit events
 - Server deployment for local AI use inside a clinic
 
