@@ -1,10 +1,10 @@
 # 🩺 Medical Document Assistant
 
-Local-first RAG assistant for medical documents
+All of your medical records and visits, organized in one place
 
-Medical records are scattered across patient portals, hospital systems, lab and imaging portals, and pharmacies, which makes them messy and hard to find. Medical Document Assistant brings them together in one place and lets **clinicians and patients ask questions about them in plain language**, with every answer **cited back to the source document and page**.
+Medical records are scattered across patient portals, hospital systems, lab and imaging portals, and pharmacies, which makes them messy and hard to find. Medical Document Assistant brings **documents, schedules, and visit history together in one place** for both **clinicians and patients**. Records are automatically sorted by type and date, charts are checked for readiness before each visit, and anyone can ask questions in plain language, with every answer **cited back to the source document and page**.
 
-Today, users upload records they've exported or downloaded. The goal is to pull records directly from where they already live, such as EHR systems like Epic and existing patient portals, so no one has to collect them by hand. Everything runs on the user's own machine by default, and no patient data is sent anywhere unless a remote model is explicitly configured.
+Today, users upload records they've exported or downloaded, and the app organizes them automatically. The goal is to pull records in directly from where they already live, such as EHR systems like Epic and existing patient portals, so everything shows up in one place without anyone collecting it by hand. Everything runs on the user's own machine by default, and no patient data is sent anywhere unless a remote model is explicitly configured.
 
 Built solo and refined with feedback from healthcare professionals. Currently awaiting server integration to run AI locally inside a clinic.
 
